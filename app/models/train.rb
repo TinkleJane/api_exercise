@@ -8,7 +8,7 @@ class Train < ApplicationRecord
         "#{series}#{letter}"
       end
     end
-  end.flattern
+  end.flatten
 
   def available_seats
     return SEATS - self.reservations.pluck(:seat_number)
