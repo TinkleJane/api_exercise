@@ -12,5 +12,6 @@ class Train < ApplicationRecord
 
   def available_seats
     return SEATS - self.reservations.pluck(:seat_number)
+    byebug
   end
 end
